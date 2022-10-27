@@ -1,0 +1,67 @@
+.sdbar-main {
+    width: 250px;
+}
+/* .sdbar-mbl{
+    display: none;
+} */
+
+.sdbar-cnt {
+    padding: 20px 40px;
+}
+
+.sdbar-one {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.active{
+    background: #eda29c;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+@media only screen and (min-width: 820px) {
+    .sdbar-mbl{
+        display: none;
+    } 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .sdbar-mbl{
+        display: none;
+    } 
+}
+@media only screen and (min-width: 770px) {
+    .sdbar-mbl{
+        display: none;
+    } 
+}
+
+
+@media only screen and (max-width: 768px){
+    .sdbar-main {
+        display: none;
+    }
+
+    .sdbar-mbl{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        padding: 20px;
+    }
+
+    .llist {
+        position: absolute;
+        height: calc(100vh - 64px);
+        bottom: 0;
+        background: #f1887e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        z-index: 2;
+    }
+}

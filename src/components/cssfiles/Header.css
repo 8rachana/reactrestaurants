@@ -1,0 +1,51 @@
+.hdr-main {
+    width: calc(100vw - 280px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 0;
+}
+
+.hdr-one {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: antiquewhite;
+    padding: 10px;
+    border-radius: 22px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.icon {
+    font-size: 16px;
+}
+.hdr-ttl{
+    color: #d85e54;
+}
+
+@media only screen and (max-width: 768px) {
+    .hdr-main {
+        width: 100vw;
+        background: #ed8f87;
+        justify-content: flex-end;
+    }
+    .hdr-ttl{
+        color: #ffff;
+    }
+    .hdr-one {
+        background: none;
+    }
+
+    .hdr-one p {
+        display: none;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
+}

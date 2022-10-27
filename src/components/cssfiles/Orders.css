@@ -1,0 +1,21 @@
+.ord-main {
+    position: absolute;
+    right: 0px;
+    width: calc(100vw - 280px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: fit-content;
+    top: 100px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ord-main {
+        width: 100vw;
+        height: calc(100vh - 70px);
+        overflow-x: auto;
+    }
+}
