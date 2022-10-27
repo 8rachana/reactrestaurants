@@ -21,6 +21,9 @@ const Sidebar = (props) => {
         }
     }
 
+
+
+
     return (
 
         <>
@@ -54,7 +57,7 @@ const Sidebar = (props) => {
                     {sidebar &&
                         sidebar.map((item, i) => (
                             <ul style={{ padding: '20px', margin: '0' }} key={i}>
-                                <li className='sdbar-one' onClick={() => setname(sidebar[i])}>{item}</li>
+                                <li className='sdbar-one' onClick={() => { setname(sidebar[i]); sethambergur(false) }} >{item}</li>
                             </ul>
                         ))}
                 </div>

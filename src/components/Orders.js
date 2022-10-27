@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './cssfiles/Orders.css';
+import { Calendar, DateRangePicker, DateRange } from 'react-date-range';
 
 const Orders = () => {
     const [list, setlist] = useState([
@@ -7,8 +8,12 @@ const Orders = () => {
         { reportName: "GST Report", lastName: "Longbottom" },
         { reportName: "Delivery Report", lastName: "Black" },
         { reportName: "Cancellation Report", lastName: "Black" }
-
     ])
+    const [start, setstart] = useState(new Date())
+    const [end, setend] = useState(new Date())
+    const [value, setValue] = React.useState(null);
+
+
     const mystyle = {
         color: "#d85e54",
         fontSize: "14px",
@@ -27,7 +32,8 @@ const Orders = () => {
         backgroundColor: "#d85e54",
         borderRadius: "10px",
         border: "none",
-        padding: "8px"
+        padding: "8px",
+        cursor:"pointer"
     };
     const mystyletwo = {
         color: "Black",
@@ -50,8 +56,12 @@ const Orders = () => {
                     list.map((user, i) => (
                         <tr key={i}>
                             <td style={mystyleone}>{user.reportName}</td>
-                            <td></td>
-                            <td></td>
+                            <td style={mystyleone}>
+                                Select Date
+                            </td>
+                            <td style={mystyleone}>
+                                Select Date
+                            </td>
                             <td >
                                 <select style={mystyletwo}>
                                     <option selected >Select restaurant</option>
